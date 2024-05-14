@@ -85,7 +85,7 @@ export default function Navbar({ isCarouselPassed }) {
   return (
     <>
       {/* Mobile View START */}
-      <div className="md:hidden navbar fixed z-50 transition-all ease-in duration-300 bg-gradient-to-br from-teal-400 to-teal-700">
+      <div className="md:hidden navbar fixed z-[999] transition-all ease-in duration-300 bg-gradient-to-br from-teal-400 to-teal-700">
         <input id="navbar_drawer" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content">
           <label
@@ -195,7 +195,7 @@ export default function Navbar({ isCarouselPassed }) {
 
       {/* Tab - Desktop View START */}
       <div
-        className={`hidden md:navbar fixed z-50 transition-all ease-in-out duration-300 ${
+        className={`hidden md:navbar fixed z-[999] transition-all ease-in-out duration-300 ${
           isCarouselPassed || router.asPath !== "/"
             ? "bg-gradient-to-br from-teal-400 to-teal-700"
             : "bg-transparent"

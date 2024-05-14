@@ -30,6 +30,7 @@ export default function Blogs() {
       const { response, error } = await blogsApi.getAllBlogs();
       if (response) {
         setBlogs(response);
+        console.log(response);
         setFilteredBlogs(response);
         setTimeout(() => {
           setIsDataLoaded(true);
