@@ -73,7 +73,7 @@ export default function Home() {
           </div>
         </div>
 
-        <MotionDiv x={100}>
+        <MotionDiv x={-100}>
           <div className="mt-6 md:mt-0 md:ms-6">
             <p className="text-justify">
               Jelaya yang merupakan singkatan dari Jelajah Budaya merupakan
@@ -98,19 +98,25 @@ export default function Home() {
 
       {!user ? (
         <div className="md:flex md:justify-center md:items-start md:gap-8">
-          <HomeCard
-            title="Daftar"
-            description="Ingin menjadi bagian dari Jelaya? Yuk buat akun Jelaya kamu terlebih dahulu"
-            buttonLink="/register"
-          />
+          <MotionDiv x={-100}>
+            <HomeCard
+              title="Daftar"
+              description="Ingin menjadi bagian dari Jelaya? Yuk buat akun Jelaya kamu terlebih dahulu"
+              buttonLink="/register"
+            />
+          </MotionDiv>
 
-          <p className="mt-4 md:hidden">atau</p>
+          <MotionDiv x={-100} optionalStyling="md:hidden">
+            <p className="mt-4">atau</p>
+          </MotionDiv>
 
-          <HomeCard
-            title="Login"
-            description="Sudah punya akun? Yuk langsung login untuk mengakses berbagai fitur menarik"
-            buttonLink="/login"
-          />
+          <MotionDiv x={-100}>
+            <HomeCard
+              title="Login"
+              description="Sudah punya akun? Yuk langsung login untuk mengakses berbagai fitur menarik"
+              buttonLink="/login"
+            />
+          </MotionDiv>
         </div>
       ) : null}
     </div>
