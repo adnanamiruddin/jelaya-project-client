@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import TextAvatar from "../TextAvatar";
+import TextAvatar from "../utils/TextAvatar";
 import { capitalizeText } from "@/utils/utils";
 
 export default function BlogItem({ blog }) {

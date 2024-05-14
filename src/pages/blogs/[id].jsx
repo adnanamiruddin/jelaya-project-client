@@ -1,6 +1,6 @@
 import blogsApi from "@/api/modules/blogs.api";
 import commentsApi from "@/api/modules/comments.api";
-import TextAvatar from "@/components/TextAvatar";
+import TextAvatar from "@/components/utils/TextAvatar";
 import MotionDiv from "@/components/functions/MotionDiv";
 import AnimationLoading from "@/components/layouts/AnimationLoading";
 import ConfirmDeleteItemModal from "@/components/layouts/ConfirmDeleteItemModal";

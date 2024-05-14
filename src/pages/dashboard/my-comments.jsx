@@ -28,7 +28,6 @@ export default function MyComments() {
     const fetchUserComments = async () => {
       const { response, error } = await commentsApi.getUserComments();
       if (response) {
-        console.log(response);
         setComments(response);
         setTimeout(() => {
           setIsDataLoaded(true);
