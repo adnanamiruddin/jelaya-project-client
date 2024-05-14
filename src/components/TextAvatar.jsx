@@ -33,7 +33,7 @@ export default function TextAvatar({ firstName, lastName }) {
             fullName
           )}`}
         >
-          <p className="text-white text-lg">{getInitials(fullName)}</p>
+          <p className="text-white font-semibold text-lg">{getInitials(fullName)}</p>
         </div>
       </div>
     </div>

@@ -4,6 +4,7 @@ import TextAvatar from "@/components/TextAvatar";
 import AnimationLoading from "@/components/layouts/AnimationLoading";
 import ConfirmDeleteItemModal from "@/components/layouts/ConfirmDeleteItemModal";
 import { selectUser } from "@/redux/features/userSlice";
+import { capitalizeText } from "@/utils/utils";
 import { useFormik } from "formik";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -157,8 +158,8 @@ export default function BlogDetail() {
       <div className="mt-6 md:flex md:justify-center md:items-center">
         <div className="flex flex-col text-sm md:w-[75%]">
           <p>#{blog.category}</p>
-          <p>#{blog.province}</p>
-          <p>#{blog.city}</p>
+          <p>#{capitalizeText(blog.province)}</p>
+          <p>#{capitalizeText(blog.city)}</p>
         </div>
       </div>
 
