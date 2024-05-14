@@ -48,7 +48,7 @@ export default function ChooseBlogContentTypeModal({
     imageContent.innerHTML = `
       <label
         htmlFor="dropzone-file"
-        class="flex flex-col items-center justify-center w-full h-64 rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100 border-2 border-teal-500"
+        class="flex flex-col items-center justify-center w-full h-64 rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100 border-2 border-teal-500 md:w-[75%]"
       >
         <div class="flex flex-col items-center justify-center pt-5 pb-6">
           <p class="mb-2 text-sm text-gray-500">
