@@ -26,7 +26,7 @@ export default function Home() {
         </p>
       </MotionDiv>
 
-      <MotionDiv x={100}>
+      <MotionDiv x={-100}>
         <p className="mt-6 text-justify">
           Budaya Indonesia tercermin dalam keterikatan yang erat dengan alam dan
           ritual kepercayaan yang mendalam. Berbagai ritual adat, seperti
