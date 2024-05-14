@@ -1,6 +1,7 @@
 import blogsApi from "@/api/modules/blogs.api";
 import AnimationLoading from "@/components/layouts/AnimationLoading";
 import BlogItem from "@/components/layouts/BlogItem";
+import NotFound from "@/components/layouts/NotFound";
 import axios from "axios";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -107,6 +108,7 @@ export default function Blogs() {
           </select>
         </div>
 
+        {/* Mobile View START */}
         <div className="flex gap-2 md:hidden">
           <div className="w-1/2">
             <label className="label">
@@ -149,7 +151,9 @@ export default function Blogs() {
             </select>
           </div>
         </div>
+        {/* Mobile View END */}
 
+        {/* Tab - Desktop View START */}
         <div className="hidden md:inline-block md:w-1/3">
           <label className="label">
             <span className="label-text text-black text-lg">Provinsi</span>
@@ -190,13 +194,24 @@ export default function Blogs() {
             ))}
           </select>
         </div>
+        {/* Tab - Desktop View END */}
       </div>
 
-      <div className="mt-6 flex flex-col gap-6 md:flex-row">
-        {filteredBlogs.map((blog) => (
-          <BlogItem key={blog.id} blog={blog} />
-        ))}
-      </div>
+      {filteredBlogs.length > 0 ? (
+        <div className="mt-6 flex flex-col gap-6 md:flex-row">
+          {filteredBlogs.map((blog) => (
+            <BlogItem key={blog.id} blog={blog} />
+          ))}
+        </div>
+      ) : (
+        <div className="flex justify-center items-center flex-col -mt-12">
+          <NotFound />
+
+          <p className="mt-6 text-center font-bold mx-8 text-lg md:text-xl">
+            Maaf, kriteria blog yang kamu cari tidak ditemukan
+          </p>
+        </div>
+      )}
     </div>
   ) : (
     <AnimationLoading />
