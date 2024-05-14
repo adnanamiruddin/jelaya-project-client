@@ -345,8 +345,8 @@ export default function MyBlogDetail() {
                 <Image
                   src={editBlogForm.values.blogImageUrl}
                   alt={editBlogForm.values.title}
-                  width={100}
-                  height={100}
+                  width={500}
+                  height={500}
                   className="mt-2 w-full h-full object-cover rounded-md md:mt-6 md:w-[75%] md:object-contain"
                 />
               </div>
@@ -412,8 +412,8 @@ export default function MyBlogDetail() {
                         <Image
                           src={blogContent.imageUrl}
                           alt={blogContent.type}
-                          width={100}
-                          height={100}
+                          width={500}
+                          height={500}
                           className="w-full h-full object-cover rounded-md"
                         />
                       </div>

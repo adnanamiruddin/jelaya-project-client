@@ -1,6 +1,7 @@
 import blogsApi from "@/api/modules/blogs.api";
 import commentsApi from "@/api/modules/comments.api";
 import TextAvatar from "@/components/TextAvatar";
+import MotionDiv from "@/components/functions/MotionDiv";
 import AnimationLoading from "@/components/layouts/AnimationLoading";
 import ConfirmDeleteItemModal from "@/components/layouts/ConfirmDeleteItemModal";
 import { selectUser } from "@/redux/features/userSlice";
@@ -122,15 +123,17 @@ export default function BlogDetail() {
         {blog.title}
       </h1>
 
-      <div className="flex justify-center">
-        <Image
-          src={blog.blogImageUrl}
-          alt={blog.title}
-          width={100}
-          height={100}
-          className="mt-4 w-full h-full object-cover rounded-md md:mt-6 md:w-[75%] md:object-contain"
-        />
-      </div>
+      <MotionDiv y={-100}>
+        <div className="flex justify-center">
+          <Image
+            src={blog.blogImageUrl}
+            alt={blog.title}
+            width={500}
+            height={500}
+            className="mt-4 w-full h-full object-cover rounded-md md:mt-6 md:w-[75%] md:object-contain"
+          />
+        </div>
+      </MotionDiv>
 
       <div className="mt-6 flex flex-col justify-center items-center gap-5">
         {blog.blogContents.map((blogContent) => {
@@ -146,8 +149,8 @@ export default function BlogDetail() {
                 key={blogContent.id}
                 src={blogContent.imageUrl}
                 alt={blogContent.type}
-                width={100}
-                height={100}
+                width={500}
+                height={500}
                 className="w-full h-full object-cover rounded-md md:w-[75%] md:object-contain"
               />
             );
@@ -155,13 +158,15 @@ export default function BlogDetail() {
         })}
       </div>
 
-      <div className="mt-6 md:flex md:justify-center md:items-center">
-        <div className="flex flex-col text-sm md:w-[75%]">
-          <p>#{blog.category}</p>
-          <p>#{capitalizeText(blog.province)}</p>
-          <p>#{capitalizeText(blog.city)}</p>
+      <MotionDiv x={-100}>
+        <div className="mt-6 md:flex md:justify-center md:items-center">
+          <div className="flex flex-col text-sm md:w-[75%]">
+            <p>#{blog.category}</p>
+            <p>#{capitalizeText(blog.province)}</p>
+            <p>#{capitalizeText(blog.city)}</p>
+          </div>
         </div>
-      </div>
+      </MotionDiv>
 
       <div className="mt-6 md:flex md:justify-center md:items-center">
         <h1 className="text-2xl font-bold md:w-[75%]">Komentar</h1>

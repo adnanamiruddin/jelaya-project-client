@@ -12,8 +12,8 @@ export default function BlogItem({ blog }) {
       <Image
         src={blog.blogImageUrl}
         alt={blog.title}
-        width={100}
-        height={100}
+        width={500}
+        height={500}
         className="w-full h-48 object-cover rounded-md rounded-b-none md:h-64"
       />
       <h1 className="mt-3 text-2xl font-bold text-center">{blog.title} </h1>

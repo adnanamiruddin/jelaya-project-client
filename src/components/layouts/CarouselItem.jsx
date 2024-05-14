@@ -12,8 +12,8 @@ export default function CarouselItem({
     <div id={slide} className="carousel-item relative w-full">
       <Image
         src={image}
-        width={1920}
-        height={1080}
+        width={500}
+        height={500}
         alt={title}
         className="w-full object-cover brightness-75 md:brightness-50 md:blur-sm"
       />
@@ -26,8 +26,8 @@ export default function CarouselItem({
         </div>
         <Image
           src={image}
-          width={1920}
-          height={1080}
+          width={500}
+          height={500}
           alt="carousel"
           className="w-10/12 h-4/6 object-cover md:w-8/12 md:h-5/6"
         />

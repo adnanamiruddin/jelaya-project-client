@@ -103,7 +103,9 @@ export default function MyComments() {
                           {comment.blog.title}
                         </p>
                         <p className="text-xs">{comment.createdAt}</p>
-                        <p className="mt-3 text-justify">{comment.text}</p>
+                        <p className="mt-3 text-sm text-justify">
+                          {comment.text}
+                        </p>
                       </Link>
                     </div>
                   </div>
