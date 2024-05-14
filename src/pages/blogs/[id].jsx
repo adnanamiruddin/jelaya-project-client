@@ -130,7 +130,7 @@ export default function BlogDetail() {
             alt={blog.title}
             width={500}
             height={500}
-            className="mt-4 w-full h-full object-cover rounded-md md:mt-6 md:w-[75%] md:object-contain"
+            className="mt-4 w-full h-full object-cover rounded-md md:mt-8 md:w-[75%] md:object-contain"
           />
         </div>
       </MotionDiv>
@@ -193,7 +193,7 @@ export default function BlogDetail() {
                 {comment.user.firstName + " " + comment.user.lastName}
               </p>
               <p className="text-xs">{comment.createdAt}</p>
-              <p className="mt-3 text-justify">{comment.text}</p>
+              <p className="mt-3 text-sm text-justify">{comment.text}</p>
             </div>
           </div>
         ))}
