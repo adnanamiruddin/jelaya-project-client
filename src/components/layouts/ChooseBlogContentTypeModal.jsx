@@ -76,7 +76,7 @@ export default function ChooseBlogContentTypeModal({
       reader.onload = (e) => {
         const imgElement = document.createElement("img");
         imgElement.src = e.target.result;
-        imgElement.setAttribute("class", "max-w-full max-h-full");
+        imgElement.setAttribute("class", "max-w-full max-h-full md:w-[75%]");
         imageContent.innerHTML = "";
         imageContent.appendChild(imgElement);
 
