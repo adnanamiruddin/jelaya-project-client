@@ -27,7 +27,7 @@ export default function Login() {
       toast.info("Anda sudah masuk. Akan diarahkan ke halaman utama");
       router.push("/");
     }
-  }, []);
+  }, [user]);
 
   const signInForm = useFormik({
     initialValues: {
