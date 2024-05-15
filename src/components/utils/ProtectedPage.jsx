@@ -17,7 +17,7 @@ const ProtectedPage = ({ children }) => {
         toast.error("Anda harus masuk terlebih dahulu");
       }
       setIsChecking(false);
-    }, 3000);
+    }, 4000);
 
     return () => clearTimeout(checkUser);
   }, [user, router]);
