@@ -57,7 +57,7 @@ export default function MyBlogs() {
     if (response) {
       toast.success("Blog berhasil dihapus.");
       setBlogs(blogs.filter((blog) => blog.id !== selectedBlogIdToDelete));
-      document.getElementById("confirm_delete_blog_modal").close();
+      document.getElementById("confirm_delete_item_modal").close();
     }
     if (error) toast.error("Gagal menghapus blog");
 
