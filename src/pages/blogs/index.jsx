@@ -198,7 +198,7 @@ export default function Blogs() {
       </div>
 
       {filteredBlogs.length > 0 ? (
-        <div className="mt-6 flex flex-col gap-6 md:flex-row">
+        <div className="mt-6 flex flex-col gap-6 md:flex-row md:flex-wrap">
           {filteredBlogs.map((blog) => (
             <BlogItem key={blog.id} blog={blog} />
           ))}
